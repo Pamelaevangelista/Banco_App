@@ -22,19 +22,23 @@
             android:id="@+id/tv_usuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
             android:text="Olá, Pedro"
             android:textColor="#ed6f05"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_conta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
             android:text="Agencia: XXXXX   Conta-corrente: XXXXXX"
             android:textColor="#333333"
-            app:layout_constraintTop_toBottomOf="@+id/tv_usuario"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_usuario" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -54,8 +58,24 @@
         android:id="@+id/tv_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:text="o que deseja fazer?"
         android:textColor="#333333"
-        android:text="o que deseja fazer?"/>
+        android:textSize="26sp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="12dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        app:spanCount="2"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/activity_item_menu"
+        app:layout_constraintTop_toBottonOf="@+id/tv_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
